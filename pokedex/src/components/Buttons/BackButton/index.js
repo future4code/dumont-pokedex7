@@ -6,7 +6,7 @@ import {ButtonContainer} from '../GeneralButtonStyles'
 const BackButton = () => (
   <ButtonContainer>
     <Button variant="contained" color="secondary">
-      <Link  to='/'>Voltar</Link>
+      <Link  to='/'>Voltar para home</Link>
 
     </Button>
   </ButtonContainer>
