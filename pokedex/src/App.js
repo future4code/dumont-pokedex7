@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import PokeCard from './components/PokeCard/PokeCard';
+import Home from './screen/Home/Home';
 
 function App() {
   return (
     <div className="App">
-      <PokeCard />
+      <Home />
     </div>
   );
 }
