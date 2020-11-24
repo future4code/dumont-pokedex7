@@ -1,6 +1,5 @@
 import React from 'react'
 import {PokeCardContainer } from '../PokeCard/style'
-import {Button} from '@material-ui/core'
 import DetailsButton from '../../components/Buttons/GoToDetailsButton/index'
 import AddButton from '../../components/Buttons/AddButton/index'
 

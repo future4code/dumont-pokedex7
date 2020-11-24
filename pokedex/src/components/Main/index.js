@@ -10,9 +10,8 @@ padding-top:50px;
 `
 
 export const MainGrid = styled.main `
-  display: grid;
-	grid-template-columns: 260px 300px  100px;
-	grid-template-rows:  200px 100px  300px;
-  justify-content:center;
-  
+   display: grid;
+   grid-template-rows:    300px 300px 400px 100px 100px;
+  grid-template-columns: 200px 220px 400px ;
+
 `

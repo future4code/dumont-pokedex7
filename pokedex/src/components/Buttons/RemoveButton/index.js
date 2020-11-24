@@ -4,12 +4,12 @@ import {Button} from '@material-ui/core'
 import {DetailsBtnContainer} from '../GeneralButtonStyles'
 
 
-const AddButton = () => (
+const RemoveButton = () => (
   <DetailsBtnContainer>
-    <Button Button variant="outlined">
-      <Link  to=''>Adicionar</Link>
+    <Button Button variant="outlined" color="secundary">
+      <Link  to=''>Remover</Link>
     </Button>
   </DetailsBtnContainer>
 );
 
-export default AddButton;
+export default RemoveButton;
