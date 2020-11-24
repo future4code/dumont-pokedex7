@@ -1,6 +1,5 @@
 import React from 'react'
 import Router from '../src/router/Router'
-
 function App() {
   return (
     <div className="App">
