@@ -1,19 +1,19 @@
 import React from 'react'
 import PokeCard from '../../components/PokeCard/PokeCard';
-import DetailsButton from '../../components/Buttons/GoToDetailsButton/index'
 import PokeDexButton from '../../components/Buttons/PokeDexButton/index'
 import {Header} from '../../components/Header/index'
-import {Main} from '../../components/Main/index'
+import {MainFlexBox} from '../../components/Main/index'
 
 const HomePage = () => {
   return(
     <div>
       <Header>
         <PokeDexButton/>
-          <h1>Home</h1>
-        <DetailsButton/>
+          <h1>Lista de pokemons</h1>
+          
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/770px-Pok%C3%A9_Ball_icon.svg.png" width="50px" />
       </Header>
-      <Main>
+      <MainFlexBox>
           <PokeCard />
           <PokeCard />
           <PokeCard />
@@ -30,7 +30,7 @@ const HomePage = () => {
           <PokeCard />
           <PokeCard />
           <PokeCard />
-      </Main>
+      </MainFlexBox>
     </div>
   )
 }

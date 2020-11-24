@@ -7,6 +7,16 @@ export const ButtonContainer = styled.div `
     color:#ffff33;
       text-decoration:none;
       list-style:none;
-
   }
+`
+
+export const DetailsBtnContainer = styled.div `
+    margin:5px;
+
+    a{
+        color:black;
+        text-decoration:none;
+        list-style:none;
+      
+    }
 `

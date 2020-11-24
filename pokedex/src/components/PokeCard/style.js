@@ -9,6 +9,6 @@ export const PokeCardContainer = styled.div `
   text-align:center;
   height: 300px;
   width: 200px;
-  margin:10px;
+  margin:15px;
   box-shadow: 3px 3px 3px 3px   #d9d9d9;
 `

@@ -4,12 +4,12 @@ import {Button} from '@material-ui/core'
 import {DetailsBtnContainer} from '../GeneralButtonStyles'
 
 
-const DetailsButton = () => (
+const AddButton = () => (
   <DetailsBtnContainer>
     <Button Button variant="outlined">
-      <Link  to='pagina de detalhes'>Ver detalhes</Link>
+      <Link  to='pagina de detalhes'>Adicionar</Link>
     </Button>
   </DetailsBtnContainer>
 );
 
-export default DetailsButton;
+export default AddButton;

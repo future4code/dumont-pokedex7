@@ -6,7 +6,7 @@ import {ButtonContainer} from '../GeneralButtonStyles'
 const PokeDexButton = () => (
   <ButtonContainer>
     <Button variant="contained" color="primary">
-      <Link  to='pokedex'>Ir para pokedex</Link>
+      <Link  to='pokedex'>Ver minha pokedex</Link>
 
     </Button>
   </ButtonContainer>

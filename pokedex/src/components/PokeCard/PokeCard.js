@@ -1,6 +1,8 @@
 import React from 'react'
 import {PokeCardContainer } from '../PokeCard/style'
 import {Button} from '@material-ui/core'
+import DetailsButton from '../../components/Buttons/GoToDetailsButton/index'
+import AddButton from '../../components/Buttons/AddButton/index'
 
 export default function PokeCard () {
   return(
@@ -8,8 +10,9 @@ export default function PokeCard () {
       <PokeCardContainer >
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" width="200px"/>
         <p>Bulbasaur</p>
-        <Button variant="contained">Adicionar</Button>
-        <Button variant="contained">Ver Detalhes</Button>
+        
+        <AddButton/>
+        <DetailsButton/>
       </PokeCardContainer>
     </div>
   )
