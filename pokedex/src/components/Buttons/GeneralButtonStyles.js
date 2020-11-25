@@ -12,7 +12,8 @@ export const ButtonContainer = styled.div `
 
 export const DetailsBtnContainer = styled.div `
     margin:5px;
-
+    color:#fff;
+    
     a{
         color:black;
         text-decoration:none;
