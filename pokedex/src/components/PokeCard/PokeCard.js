@@ -3,10 +3,6 @@ import {PokeCardContainer } from '../PokeCard/style'
 import DetailsButton from '../../components/Buttons/GoToDetailsButton/index'
 import AddButton from '../../components/Buttons/AddButton/index'
 
-const CardContainer = styled.div`
-border: 2px solid black;
-width: 250px;
-`
 
 export default function PokeCard () {
   return(
