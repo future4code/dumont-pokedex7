@@ -2,6 +2,7 @@ import React from 'react'
 import {PokeCardContainer } from '../PokeCard/style'
 import DetailsButton from '../../components/Buttons/GoToDetailsButton/index'
 import AddButton from '../../components/Buttons/AddButton/index'
+import styled from 'styled-components'
 
 
 export default function PokeCard () {
