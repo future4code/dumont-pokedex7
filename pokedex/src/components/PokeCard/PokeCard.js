@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {PokeCardContainer } from '../PokeCard/style'
 import DetailsButton from '../../components/Buttons/GoToDetailsButton/index'
 import AddButton from '../../components/Buttons/AddButton/index'
-import styled from 'styled-components'
+
+
 import axios from 'axios'
 
 
@@ -29,6 +30,6 @@ export default function PokeCard (props) {
         <AddButton/>
         <DetailsButton/>
       </PokeCardContainer>
-    </div>
+     </ div>
   )
 }

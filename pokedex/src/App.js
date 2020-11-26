@@ -5,11 +5,15 @@ import GlobalState from './Global/GlobalState';
 function App() {
   return (
     <div className="App">
+
+        <GlobalState>
+            <Router />
+
       <GlobalState>
         <Router />
+
       </GlobalState>
     </div>
   );
 }
-
 export default App;
