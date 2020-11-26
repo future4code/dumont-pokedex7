@@ -7,7 +7,7 @@ import {DetailsBtnContainer} from '../GeneralButtonStyles'
 const AddButton = () => (
   <DetailsBtnContainer>
     <Button Button variant="outlined">
-      <Link  to=''>Adicionar</Link>
+      Adicionar
     </Button>
   </DetailsBtnContainer>
 );
