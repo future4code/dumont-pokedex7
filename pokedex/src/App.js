@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from './screen/Home/Home';
-import Pokedex from './screen/Pokedex/Pokedex';
+import React from 'react'
+import Router from '../src/router/Router'
+import GlobalState from './Global/GlobalState';
 
 function App() {
   return (
     <div className="App">
-      {/* <Home /> */}
-      <Pokedex />
+      <GlobalState>
+        <Router />
+      </GlobalState>
     </div>
   );
 }
