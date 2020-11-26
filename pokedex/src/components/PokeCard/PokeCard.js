@@ -5,10 +5,6 @@ import AddButton from '../../components/Buttons/AddButton/index'
 import styled from 'styled-components'
 import axios from 'axios'
 
-const CardContainer = styled.div`
-border: 2px solid black;
-width: 250px;
-`
 
 export default function PokeCard (props) {
   const [photo, setPhoto] = useState ([])
