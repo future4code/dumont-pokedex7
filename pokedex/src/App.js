@@ -1,11 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import PokeCard from './components/PokeCard/PokeCard';
+import React from 'react'
+import Router from '../src/router/Router'
+import GlobalState from './Global/GlobalState';
 
 function App() {
   return (
     <div className="App">
-      <PokeCard />
+      <GlobalState>
+        <Router />
+      </GlobalState>
     </div>
   );
 }
