@@ -12,6 +12,7 @@ const GlobalState = (props) => {
 
     axios.get(baseURL).then(response => {
       setPokemonList(response.data.results)
+      setPokedex(response.data.results)
   })
   .catch(error =>{console.log(error)})
 }
