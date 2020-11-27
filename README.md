@@ -1,16 +1,16 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Diego dos Santos Rosa
+- Alvaro Joaquim de Faria Barros Junior
+- Vitor de Farias
 
 Link do Surge: www.link.com.br
 
 O que funciona:
-- Item 1
+- As rotas funcionam
 - Item 2
 
 O que não funciona: 
-- Item 3
-- Item 4
+- O botao adicionar não funciona
+- O botao remover não funciona
