@@ -54,6 +54,7 @@ import GlobalStateContext from '../../Global/GlobalStateContext';
           })
         }
       </HomeFlexBox>
+
     </div>
   )
 }
