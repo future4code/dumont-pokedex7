@@ -16,7 +16,6 @@ const {states, setters, requests} = useContext(GlobalStateContext)
       requests.getPokemonList()
     }, [])
     const addToPokedex = (newPokemon) => {
-          console.log("entrei")
           const pokemonInPokedex = states.pokedex.find((pokemon) => newPokemon.name === pokemon.name)
       if (!pokemonInPokedex) {
           const pokemonToAdd = states.pokemonList.find((pokemon) => newPokemon.name === pokemon.name)
@@ -24,7 +23,6 @@ const {states, setters, requests} = useContext(GlobalStateContext)
           setters.setPokedex(newPokedex)
       }
     }
-    console.log(states.pokedex)
     // const renderedPokemons = () => {
     //   pokemonList.map((pokemon) => {
     //     return (<PokeCard key={pokemon.name} photo={photo} name={pokemon.name}/>)
