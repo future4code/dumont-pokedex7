@@ -8,8 +8,9 @@ Nome dos integrantes:
 Link do Surge: www.link.com.br
 
 O que funciona:
-- As rotas funcionam
-- Item 2
+- As rotas estão funcionando
+- Foi feita a integração dos dadoscom a pokeapi
+- As paginas estão responsivas
 
 O que não funciona: 
 - O botao adicionar não funciona
