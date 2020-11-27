@@ -1,6 +1,6 @@
 import  React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
+//teste
 const GetHooks = () => {
     const [dados,setDados] = useState([])
     const getDados = () =>{ 
