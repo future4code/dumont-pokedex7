@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import {PokeCardContainer } from '../PokeCard/style'
-import DetailsButton from '../../components/Buttons/GoToDetailsButton/index'
-import AddButton from '../../components/Buttons/AddButton/index'
 import axios from 'axios'
-
+import { DetailsBtnContainer,PokeCardContainer} from '../../styles/styles'
+import {Button} from '@material-ui/core'
+import { useHistory } from "react-router-dom";
+import {goToDetailsPage} from '../../router/Coordinator'
 
 export default function PokeCard (props) {
+  const history = useHistory();
+
   const [photo, setPhoto] = useState ([])
 
   const pokemonPhoto = () => {
@@ -25,8 +27,15 @@ export default function PokeCard (props) {
       <PokeCardContainer >
         <img src={photo} alt={props.pokemon.name}/>
         <p>{props.pokemon.name}</p>    
-        <AddButton/>
-        <DetailsButton/>
+        <DetailsBtnContainer>
+            <Button Button variant="outlined">
+              Adicionar
+            </Button>
+      </DetailsBtnContainer>
+
+      <DetailsBtnContainer>
+            <Button  variant="outlined" onClick={()=>goToDetailsPage(history)}>Ver detalhes</Button>
+      </DetailsBtnContainer>
       </PokeCardContainer>
      </ div>
   )

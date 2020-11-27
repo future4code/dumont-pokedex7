@@ -9,8 +9,11 @@ const Router = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path='/'   component = { HomePage } />
-      <Route path='/pokedex' component = { PokeDexPage } />
-      <Route path='/pagina de detalhes'  component = { DetailsPage } />
+      <Route exact path='/pokedex' component = { PokeDexPage } />
+      <Route exact path='/detalhes'  component = { DetailsPage } />
+      <Route>
+          <div>"Erro 404 - Este Pokemon não existe!" </div>
+        </Route>
     </Switch>
   </BrowserRouter>
 );
