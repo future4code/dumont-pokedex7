@@ -12,18 +12,22 @@ export default function PokeCard (props) {
 
   const pokemonPhoto = () => {
     axios.get(props.pokemon.url).then((response) => {
-      setPhoto(response.data.sprites.front_default)
+        setPhoto(response.data.sprites.front_default)
     }).catch((error) => {
       console.log(error.message)
     })
   }
+
   useEffect(() => {
     pokemonPhoto()
   }, [])
+
   return(
     <div>
       <PokeCardContainer >
-          <img src={photo} alt={props.pokemon.name}/>
+          <img 
+          src={photo}
+           alt={props.pokemon.name}/>
           <p>{props.pokemon.name}</p>    
         <DetailsBtnContainer>
             <Button Button variant="outlined">
@@ -32,7 +36,10 @@ export default function PokeCard (props) {
       </DetailsBtnContainer>
 
       <DetailsBtnContainer>
-            <Button  variant="outlined" onClick={()=>goToDetailsPage(history)}>Ver detalhes</Button>
+            <Button  variant="outlined"
+                onClick={()=>goToDetailsPage(history)}>
+                Ver detalhes
+               </Button>
       </DetailsBtnContainer>
       </PokeCardContainer>
       </ div>
