@@ -1,18 +1,16 @@
-
-export const goToHome = (history) => {
+export const goToHomePage = (history) => {
   history.push("/");
 };
 
-export const goToDetails = (history) => {
+export const goToDetailsPage = (history) => {
   history.push("/detalhes");
 };
 
-export const goToPokedex = (history) => {
+export const goToPokeDexPage = (history) => {
   history.push("/pokedex");
 };
 
 export const goBack = (history) => {
     history.goBack();
   };
-
 
