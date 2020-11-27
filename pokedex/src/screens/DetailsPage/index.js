@@ -2,7 +2,7 @@ import React from 'react'
 import {Header, BtnContainer,ButtonContainer, DetailsBtnContainer} from '../../styles/styles'
 import DetailsCard from '../../components/DetailsCard/index'
 import { useHistory } from "react-router-dom";
-import {goToHomePage} from '../../router/Coordinator'
+import {goBack} from '../../router/Coordinator'
 import {Button} from '@material-ui/core'
 
 const DetailsPage = () => {
@@ -13,8 +13,9 @@ const DetailsPage = () => {
    < Header>
             {/** Botao para voltar pra homepage*/}
                 <ButtonContainer>
-                      <Button variant="contained" color="secondary"onClick={()=>goToHomePage(history)} >
-                        Voltar para home
+                      <Button variant="contained" color="secondary"
+                          onClick={()=>goBack(history)} >
+                          Voltar para home
                       </Button>
                   </ButtonContainer>
               <h1>Nome do Pokemon</h1>
