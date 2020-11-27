@@ -1,12 +1,13 @@
 import React from 'react'
 import {Header, BtnContainer,ButtonContainer, DetailsBtnContainer} from '../../styles/styles'
 import DetailsCard from '../../components/DetailsCard/index'
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import {goBack} from '../../router/Coordinator'
 import {Button} from '@material-ui/core'
 
 const DetailsPage = () => {
   const history = useHistory();
+  const pathParams = useParams();
 
   return(
     <div>
@@ -32,7 +33,7 @@ const DetailsPage = () => {
               </BtnContainer >
           </Header>
           <div>
-              <DetailsCard/>
+              <DetailsCard pokemon={pathParams}/>
           </div>
     </div>
   )

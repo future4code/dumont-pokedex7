@@ -37,7 +37,7 @@ export default function PokeCard (props) {
 
       <DetailsBtnContainer>
             <Button  variant="outlined"
-                onClick={()=>goToDetailsPage(history)}>
+                onClick={()=>goToDetailsPage(history, props.pokemon.name)}>
                 Ver detalhes
                </Button>
       </DetailsBtnContainer>

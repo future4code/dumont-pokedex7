@@ -9,7 +9,7 @@ const Router = () => (
     <Switch>
           <Route exact path='/'   component = { HomePage } />
           <Route exact path='/pokedex' component = { PokeDexPage } />
-          <Route exact path='/detalhes'  component = { DetailsPage } />
+          <Route exact path='/detalhes/:pokemon'  component = { DetailsPage } />
           <Route>
               <div>"Erro 404 - Este Pokemon não existe!" </div>
             </Route>
