@@ -10,11 +10,11 @@ const DetailsPage = () => {
   const pathParams = useParams();
 
   return(
-    <div>
-   < Header>
+    <React.Fragment>
+   < Header role="header">
             {/** Botao para voltar pra homepage*/}
-                <ButtonContainer>
-                      <Button variant="contained" color="secondary"
+                <ButtonContainer role="div">
+                      <Button role="button" variant="contained" color="secondary"
                           onClick={()=>goBack(history)} >
                           Voltar para home
                       </Button>
@@ -22,20 +22,20 @@ const DetailsPage = () => {
               <h1>Nome do Pokemon</h1>
 
               {/*Botoes add e remover pokemon*/ }
-              <BtnContainer >
-                  <DetailsBtnContainer>
-                        <Button Button variant="outlined">Adicionar</Button>
+              <BtnContainer  role="div">
+                  <DetailsBtnContainer roles="div">
+                        <Button role="button" variant="outlined">Adicionar</Button>
                   </DetailsBtnContainer>
 
-                  <DetailsBtnContainer>
-                      <Button Button variant="outlined" color="secundary">Remover</Button>
+                  <DetailsBtnContainer role="div">
+                      <Button role="button" variant="outlined" color="secundary">Remover</Button>
                 </DetailsBtnContainer>
               </BtnContainer >
           </Header>
-          <div>
-              <DetailsCard pokemon={pathParams}/>
-          </div>
-    </div>
+          <React.Fragment>
+              <DetailsCard role="div" pokemon={pathParams}/>
+          </React.Fragment>
+    </React.Fragment>
   )
 }
 export default DetailsPage;
