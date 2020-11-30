@@ -8,10 +8,10 @@ Nome dos integrantes:
 Link do Surge: www.link.com.br
 
 O que funciona:
-- As rotas estão funcionando
-- Foi feita a integração dos dadoscom a pokeapi
-- As paginas estão responsivas
-
+- Funciona os routers das páginas, sendo possível navegar entre elas.
+- É possível ver os detalhes de um pokemon
+- A lista dos 20 primeiros pokemons estão sendo renderizadas na página home
+- A lista dos pokemons na pokedex estão sendo renderizadas na página pokedex
+- O conteudo se adapta a qualqer tamanho de tela
 O que não funciona: 
-- O botao adicionar não funciona
-- O botao remover não funciona
+
