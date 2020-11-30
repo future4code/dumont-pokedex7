@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Alvaro Joaquim de Faria Barros Junior
 - Vitor de Farias
 
-Link do Surge: gorgeous-color.surge.sh
+Link do codesandbox: https://wxqtf.codesandbox.io/
 
 O que funciona:
 - Funciona os routers das páginas, sendo possível navegar entre elas.
@@ -16,4 +16,5 @@ O que funciona:
 
 O que não funciona: 
 - O desafio
+- O link do surge
 
