@@ -16,5 +16,5 @@ O que funciona:
 
 O que não funciona: 
 - O desafio
-- O link do surge
+- Problemas ao gerar o link do surge
 
