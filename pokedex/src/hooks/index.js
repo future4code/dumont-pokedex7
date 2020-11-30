@@ -1,9 +1,12 @@
-import  React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
-//teste
+
 const GetHooks = () => {
+
     const [dados,setDados] = useState([])
-    const getDados = () =>{ 
+
+    const getDados = () =>{
+        //Pega os dados dos pokemons na poke API 
         axios.get('https://pokeapi.co/api/v2/pokemon').then(resposta => {
             setDados(resposta.data.results)
             console.log(resposta.data.results)
@@ -16,7 +19,5 @@ const GetHooks = () => {
           }, []) 
 
     return(dados.map) 
-
 }
-
 export default GetHooks; 

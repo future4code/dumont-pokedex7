@@ -4,53 +4,53 @@ import {Button} from '@material-ui/core'
 import { useHistory } from "react-router-dom";
 import {goToDetailsPage} from '../../router/Coordinator'
 import axios from 'axios'
-import GlobalStateContext from '../../Global/GlobalStateContext'
+import GlobalStateContext from '../../global/GlobalStateContext';
 
- const PokeCard = (props,isPokemon) => {
+ const PokeCard = (props) => {
     const history = useHistory();
 
-    //const [photo, setPhoto] = useState ([])
+    const [photo, setPhoto] = useState ([])
+    const {states, setters, requests} = useContext(GlobalStateContext)
 
-    const {pokemons, setPokemos, pokedex, setPokedex} = useContext(GlobalStateContext)
-    
+    const pokemonPhoto = () => {
+      axios.get(props.pokemon.url).then((response) => {
+          setPhoto(response.data.sprites.front_default)
+      }).catch((error) => {
+        console.log(error.message)
+      })
+    }
+
+    useEffect(() => {
+      pokemonPhoto()
+    }, [])
+
     const addToPokedex = () => {
-      const pokeIndex = pokemons.findIndex(
-        (item) => item.name === props.pokemon.name
-      );
-      const newPokemonsList = [...pokemons];
-      newPokemonsList.splice(pokeIndex, 1);
-      const orderedPokemons = newPokemonsList.sort((a, b) => {
-        return a.id - b.id;
-      });
+      const pokeIndex = states.pokemonList.findIndex((item) => item.name === props.pokemon.name)
+      const newPokemonList = [...states.pokemonList]
+      newPokemonList.splice(pokeIndex, 1)
 
-      const newPokedexList = [...pokedex, props.pokemon];
-      const orderedPokedex = newPokedexList.sort((a, b) => {
-        return a.id - b.id;
-      });
-  
-      setPokedex(orderedPokedex);
-      setPokemons(orderedPokemons);
-    };
-  
+      const newPokedexList = [...states.pokedex, props.pokemon]
+      const orderedList = newPokedexList.sort((a, b) => {
+        return Number(a.url.slice(34,a.url.length-1)) - Number(b.url.slice(34,b.url.length-1))
+      })
+
+      setters.setPokedex(orderedList)
+      setters.setPokemonList(newPokemonList)
+    }
+
     const removeFromPokedex = () => {
-      const pokeIndex = pokedex.findIndex(
-        (item) => item.name === props.pokemon.name
-      );
-  
-      const newPokedexList = [...pokedex];
-      newPokedexList.splice(pokeIndex, 1);
-      const orderedPokedex = newPokedexList.sort((a, b) => {
-        return a.id - b.id;
-      });
-  
-      const newPokemonsList = [...pokemons, props.pokemon];
-      const orderedPokemons = newPokemonsList.sort((a, b) => {
-        return a.id - b.id;
-      });
-  
-      setPokedex(orderedPokedex);
-      setPokemons(orderedPokemons);
-    };
+      const pokeIndex = states.pokedex.findIndex((item) => item.name === props.pokemon.name)
+      const newPokedexList = [...states.pokedex]
+      newPokedexList.splice(pokeIndex, 1)
+
+      const newPokemonList = [...states.pokemonList, props.pokemon]
+      const orderedList = newPokemonList.sort((a, b) => {
+        return Number(a.url.slice(34,a.url.length-1)) - Number(b.url.slice(34,b.url.length-1))
+      })
+
+      setters.setPokedex(newPokedexList)
+      setters.setPokemonList(orderedList)
+    }
 
     return(
       <React.Fragment>
@@ -60,8 +60,9 @@ import GlobalStateContext from '../../Global/GlobalStateContext'
                 alt={props.pokemon.name}/>
                 <p>{props.pokemon.name}</p>    
               <DetailsBtnContainer role="div">
-                  <Button onClick={isPokedex ? removeFromPokedex : addToPokedex} variant="outlined">
-                    {isPokedex ? "Adicionar " : "Remover"}
+                  <Button roles="button" variant="outlined" 
+                    onClick={props.isPokedex ? removeFromPokedex : addToPokedex}>
+                    {props.isPokedex ? "Remover" : "Adicionar"}
                   </Button>
             </DetailsBtnContainer >
 
