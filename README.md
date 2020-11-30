@@ -13,6 +13,7 @@ O que funciona:
 - A lista dos 20 primeiros pokemons estão sendo renderizadas na página home
 - A lista dos pokemons na pokedex estão sendo renderizadas na página pokedex
 - O conteudo se adapta a qualqer tamanho de tela
+
 O que não funciona: 
 - O desafio
 
