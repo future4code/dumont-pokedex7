@@ -5,12 +5,16 @@ Nome dos integrantes:
 - Alvaro Joaquim de Faria Barros Junior
 - Vitor de Farias
 
-Link do Surge: www.link.com.br
+Link do codesandbox: https://wxqtf.codesandbox.io/
 
 O que funciona:
-- As rotas funcionam
-- Item 2
+- Funciona os routers das páginas, sendo possível navegar entre elas.
+- É possível ver os detalhes de um pokemon
+- A lista dos 20 primeiros pokemons estão sendo renderizadas na página home
+- A lista dos pokemons na pokedex estão sendo renderizadas na página pokedex
+- O conteudo se adapta a qualqer tamanho de tela
 
 O que não funciona: 
-- O botao adicionar não funciona
-- O botao remover não funciona
+- O desafio
+- Problemas ao gerar o link do surge
+

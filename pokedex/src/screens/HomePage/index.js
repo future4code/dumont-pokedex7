@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, } from 'react'
 import {Header,ButtonContainer, HomeFlexBox} from '../../styles/styles'
 import { useHistory } from "react-router-dom";
 import {goToPokeDexPage} from '../../router/Coordinator'
