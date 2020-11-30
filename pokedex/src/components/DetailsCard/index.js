@@ -5,6 +5,7 @@ import { baseURL } from '../../constants/urls'
 
 const DetailsCard = (props) => {
   const [data, setData] = useState({})
+  const [moves, setMoves] = useState([])
 
   const getPokeDetails = () => {
     
@@ -18,6 +19,22 @@ const DetailsCard = (props) => {
   useEffect(()=>{
     getPokeDetails()
   }, [])
+
+  const renderMoves = () => {
+    const newMoves = []
+    if (data.moves) {
+      for (let i=0; (i < 7 && i < data.moves.length); i++){
+        newMoves.push(data.moves[i].move.name)
+      }
+      setMoves(newMoves)
+    }
+  }
+
+  useEffect(() => {
+    renderMoves()
+  }, [data])
+
+
 
   return(
     <React.Fragment>
@@ -61,19 +78,9 @@ const DetailsCard = (props) => {
                     </PokeTypeContainer>
                     <PokeMovesContainer roles="div">
                         <h3 role="h3">Moves</h3>
-                        
-                        {data.moves && 
-
-                        <React.Fragment>
-                              <p>{data.moves[0].move.name}</p>
-                              <p>{data.moves[1].move.name}</p>
-                              <p>{data.moves[2].move.name}</p>
-                              <p>{data.moves[3].move.name}</p>
-                              <p>{data.moves[4].move.name}</p>
-                              <p>{data.moves[5].move.name}</p>
-                              <p>{data.moves[6].move.name}</p>
-                              <p>{data.moves[7].move.name}</p>
-                          </React.Fragment>}
+                        {moves && moves.map((moves) => {
+                          return <p>{moves}</p>
+                        })}
                   </PokeMovesContainer >
               </TypeMovesFlexBox >
         </DetailsFlexBox>
