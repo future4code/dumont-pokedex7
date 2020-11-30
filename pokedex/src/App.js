@@ -1,14 +1,14 @@
 import React from 'react'
 import Router from './router/Router'
-import GlobalState from './Global/GlobalState.js'
+import GlobalState from './global/GlobalState.js.js'
 
 const App = () => {
   return (
-    <div className="App">
+    <React.Fragment>
          <GlobalState>
             <Router />
-      </GlobalState>
-    </div>
+         </GlobalState>
+    </React.Fragment>
   );
 }
 

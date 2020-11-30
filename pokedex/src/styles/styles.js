@@ -6,7 +6,7 @@ import styled from 'styled-components'
 export const Header = styled.header `
     background-color:#ff6666;
     color:#fff;
-    height: 50px;
+    height: 80px;
     padding:20px 20px;
     display:flex;
     justify-content:space-between;
@@ -22,13 +22,38 @@ export const Header = styled.header `
     h1{
       color: #ffff33;
     }
+
+      @media only screen and (max-width: 600px)  {
+            header{
+                  height:40px;
+                  width:100vw;
+                  
+            }
+
+            img{
+                  height:30px;
+                  width:100px
+            }     
+
+            h1{
+                  font-size:15px;
+            }
+
+            button{
+                   height:50px;
+                  width:30px;
+                  font-size:10px; 
+            }
+
+      }
+        
 `
 //FLEXBOX PARA HOME E DETALHES---
 export const HomeFlexBox = styled.main `
       height:100vh;
       display:flex;
       justify-content:center;
-      justify-content:space-evenly;
+      justify-content:space-around;
       flex-wrap: wrap;
       padding-top:50px;
 `
@@ -37,6 +62,7 @@ export const HomeFlexBox = styled.main `
 export const PokeCardContainer = styled.div `
       background-color: #f2f2f2;
       display:flex;
+      border-radius:20px;
       flex-direction:column;
       justify-content:space-evenly;
       justify-content:center;
@@ -58,6 +84,8 @@ export const DetailsFlexBox = styled.main `
       justify-content:center;
       flex-wrap: wrap;
       padding-top: 8%;
+    
+
 `
 //ESTILOS PARA O DETAILS CARD
 export const ImgFlexBox = styled.div `
@@ -70,29 +98,12 @@ export const ImgFlexBox = styled.div `
 `
 export const PokeImgContainer = styled.div `
       background-color:#f2f2f2f2;
+      border-radius:20px;
       height:250px;
       width:250px;
       margin: 20px;
       box-shadow: 3px 3px 3px 3px   #d9d9d9;
       display:flex;
-      justify-content:center;
-      text-align:center;
-      align-items:center;
-`
-
-export const StatsFlexBox = styled.div `
-      display:flex;
-      justify-content:column;
-      text-align:Center;
-`
-export const PokeStatsContainer = styled.div `
-      background-color:#f2f2f2f2;
-      height:543px;
-      width:300px;
-      margin: 20px;
-      box-shadow: 3px 3px 3px 3px   #d9d9d9;
-      display:flex;
-      flex-direction:column;
       justify-content:center;
       text-align:center;
       align-items:center;
@@ -103,19 +114,38 @@ export const TypeMovesFlexBox = styled.div `
 `
 export const PokeTypeContainer = styled.div `
       background-color:#f2f2f2f2;
+      border-radius:20px;
       height:60px;
-      width:400px;
+      width:350px;
       margin: 20px;
       box-shadow: 3px 3px 3px 3px   #d9d9d9;
       display:flex;
       flex-direction:row;
       justify-content: space-evenly;
 `
-
-export const PokeMovesContainer = styled.div`
+      export const PokeMovesContainer = styled.div`
+            background-color:#f2f2f2f2;
+            border-radius:20px;
+            height:439px;
+            width:350px;
+            margin: 20px;
+            box-shadow: 3px 3px 3px 3px   #d9d9d9;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            text-align:center;
+            align-items:center;
+      `
+export const StatsFlexBox = styled.div `
+      display:flex;
+      justify-content:column;
+      text-align:Center;
+`
+export const PokeStatsContainer = styled.div `
       background-color:#f2f2f2f2;
-      height:439px;
-      width:400px;
+      border-radius:20px;
+      height:543px;
+      width:350px;
       margin: 20px;
       box-shadow: 3px 3px 3px 3px   #d9d9d9;
       display:flex;
@@ -124,6 +154,8 @@ export const PokeMovesContainer = styled.div`
       text-align:center;
       align-items:center;
 `
+
+
 
 //BOTOES -------------------------------------
 export const BtnContainer = styled.div`
@@ -151,3 +183,5 @@ export const DetailsBtnContainer = styled.div `
     }
     
     `
+
+    
