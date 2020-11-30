@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Alvaro Joaquim de Faria Barros Junior
 - Vitor de Farias
 
-Link do Surge: www.link.com.br
+Link do Surge: gorgeous-color.surge.sh
 
 O que funciona:
 - Funciona os routers das páginas, sendo possível navegar entre elas.
