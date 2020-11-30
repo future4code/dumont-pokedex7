@@ -53,8 +53,6 @@ const DetailsCard = (props) => {
                         height="300px" alt=""/>}
                   </PokeImgContainer>
             </ImgFlexBox >
-<<<<<<< HEAD
-=======
             <StatsFlexBox role="div">
                     <PokeStatsContainer roles="div">
                           <h3 role="h3">Stats</h3>
@@ -69,7 +67,6 @@ const DetailsCard = (props) => {
                           </React.Fragment>
                   </PokeStatsContainer >
             </StatsFlexBox >
->>>>>>> 68fa8540ffe2fdfb2b86a40f0547e9d57bbd8087
             <TypeMovesFlexBox role="div">
                       <PokeTypeContainer role="div">
                           <h3 role="h3">Type: </h3>
@@ -86,23 +83,6 @@ const DetailsCard = (props) => {
                         })}
                   </PokeMovesContainer >
               </TypeMovesFlexBox >
-<<<<<<< HEAD
-            <StatsFlexBox role="div">
-                    <PokeStatsContainer roles="div">
-                          <h3 role="h3">Stats</h3>
-                          <React.Fragment>
-                              {data.stats && data.stats.map((stat) => {
-                                return <p role="p"
-                                    key={stat.stat.name}>
-                                    <strong>{stat.stat.name}: 
-                                    </strong>{stat.base_stat}
-                                  </p>
-                              })}
-                          </React.Fragment>
-                  </PokeStatsContainer >
-            </StatsFlexBox >
-=======
->>>>>>> 68fa8540ffe2fdfb2b86a40f0547e9d57bbd8087
         </DetailsFlexBox>
     </React.Fragment>
   )

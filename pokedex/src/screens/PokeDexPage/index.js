@@ -20,11 +20,7 @@ const PokeDexPage = () => {
               <ButtonContainer role="div">
                   <Button role="button" variant="contained" color="secondary"
                         onClick={()=>goToHomePage(history)} >
-<<<<<<< HEAD
-                        Voltar 
-=======
                         Voltar para home
->>>>>>> 68fa8540ffe2fdfb2b86a40f0547e9d57bbd8087
                   </Button>
               </ButtonContainer>
 
