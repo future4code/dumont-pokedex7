@@ -10,51 +10,8 @@ import {PokeLogo} from '../../assets/img/PokeLogo'
 const HomePage = () => {
   const history = useHistory();
 
-const {states, setters, requests} = useContext(GlobalStateContext)
-
-    useEffect(()=>{
-      requests.getPokemonList()
-    }, [])
-    // const addToPokedex = (newPokemon) => {
-    //       console.log("entrei")
-    //       const pokemonInPokedex = states.pokedex.find((pokemon) => newPokemon.name === pokemon.name)
-    //   if (!pokemonInPokedex) {
-    //       const pokemonToAdd = states.pokemonList.find((pokemon) => newPokemon.name === pokemon.name)
-    //       const newPokedex = [...states.pokedex, pokemonToAdd]
-    //       setters.setPokedex(newPokedex)
-    //   }
-    // }
-    // const addPokemonToPokedex = (pokemon) => {
-    //   pokemon.renderHome = false
-    //   let newPokedex = [...states.pokedex];
-    //   let alreadyExists = false;
-    //   newPokedex.map((pokedexPokemon) => {
-    //     if (pokedexPokemon.name === pokemon.name) {
-    //       alert(`${pokemon.name} já está na pokedex!`);
-    //       alreadyExists = true;
-    //     }
-    //   });
-    //   if (alreadyExists === false) {
-    //     newPokedex.push(pokemon);
-    //     setters.setPokedex(newPokedex);
-    //     alert(`${pokemon.name} foi adiciona a sua pokedex`);
-    //     console.log(states.pokedex);
-    //   } else {
-    //     alreadyExists = false;
-    //   }
-    // };
-    // console.log("pokemons", states.pokemon)
-    // const renderPokemons =
-    //   states.pokemons &&
-    //   states.pokemons.map((pokemon) => {
-    //     if(pokemon.renderHome===true){
-    // console.log(states.pokedex)
-
-    // const renderedPokemons = () => {
-    //   pokemonList.map((pokemon) => {
-      //     return (<PokeCard key={pokemon.name} photo={photo} name={pokemon.name}/>)
-      //   })
-    // }
+  const {states} = useContext(GlobalStateContext)
+    
     return(
       <React.Fragment>
               <Header role="header">
@@ -68,15 +25,15 @@ const {states, setters, requests} = useContext(GlobalStateContext)
                           <img role="img" src={PokeLogo} />
                 </Header>
                 <HomeFlexBox role="main">
-                        {states.pokemonList && 
-                        states.pokemonList.map((pokemon) => {
-                        return (
-                        <PokeCard role="div"
-                                  key={pokemon.name}
-                                  pokemon={pokemon}
-                        />)
-                                })
-                            }                              
+                  {states.pokemonList && 
+                    states.pokemonList.map((pokemon) => {
+                      return (
+                      <PokeCard role="div"
+                                key={pokemon.name}
+                                pokemon={pokemon}
+                                isPokedex={false}/>)
+                    })
+                  }                              
           </HomeFlexBox>
       </React.Fragment>
       )
